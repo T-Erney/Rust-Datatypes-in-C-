@@ -1,13 +1,11 @@
 # Recreating Option and Result Types in C++
 
-> Tristan Erney
-
-# Option and Result Types from Rust 
+## Option and Result Types from Rust 
 
 Option is an enumerator type which allows the programmer to create a datatype which can return a Some value of the specified datatype, or return a value of None. This can be useful for a variety of different use cases. In Rust we use this to put wrappers around code which can be error prone when certain conditions are not met. As like the Option type, the Result type can also be used for resolving code which can be error prone, but has the alternative of returning a secondary data type. The functionality of these datatypes are what I think C++ can benefit from to create more safety in the language. 
 This got me thinking. Could we create a datatype which can replecate the effect of these types in the C++ language? This project answers that. 
 
-## Option 
+### Option 
 
 Option was the easier of the two to implement. In Rust, the implementation of the Option type is as follows:
 
@@ -59,7 +57,7 @@ int main() {
 
 From the code above, we can guarentee that `value` will result in a value of `131`. This is only a very elementry level example for this kind of datatype, but you get the idea. 
 
-## Result 
+### Result 
 
 The Result datatype was more of a challenge. The structure of the datatype was essentially the same as the Option type. However, we are now using two templated types instead of one like the Option type. In Rust, we can define the Result type as the following:
 
