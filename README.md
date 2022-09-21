@@ -18,7 +18,7 @@ pub enum Option<T> {
 
 Enumerators in Rust are usually used as a fancy way to write tagged unions, which I find to be a great way to write union types since the alternative to the Option type in C++ is very verbose. Rust makes writing this kind of code very simple and even make implementing various attributes easy to implement as well as we will see later on. 
 
-In C_++_, we would write the same Rust code as the following:
+In C++, we would write the same Rust code as the following:
 
 ``` c++
 enum __option_type__ { option_some, option_none };
