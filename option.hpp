@@ -1,3 +1,6 @@
+#ifndef OPTION_TYPE
+#define OPTION_TYPE 
+
 #include <iostream>
 
 enum __option_type__ { option_some, option_none };
@@ -42,3 +45,4 @@ template <typename T> Option<T> None() {
   };
 }
 
+#endif // OPTION_TYPE

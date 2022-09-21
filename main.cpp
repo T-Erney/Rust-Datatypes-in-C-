@@ -20,7 +20,16 @@ int main() {
   int arr[] = {
     1, 2, 3, 4, 5, 6, 7, 8, 9
   };
-  auto s = sum(arr, 9).ok().unwrap();
+
+  int s = 0;
+  auto result = sum(arr, 9);
+  if (result.is_ok()) {
+    auto option = result.ok();
+    s = option.unwrap();
+  } else {
+    std::cout << "Error: " << result.err() << "\n";
+    return -1;
+  }
 
   std::cout << "auto s = sum(arr, 9).ok().unwrap() = " << s << "\n";
 
