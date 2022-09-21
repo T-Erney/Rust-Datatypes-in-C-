@@ -25,17 +25,6 @@ struct Result {
   Result(const Result& src) {
     *this = src;
   }
-  ~Result() {}
-
-  void display() {
-    std::cout << "Result<O, E> {\n";
-    std::cout << "\t.__type__ = " << ((__type__ == result_ok)? "Ok": "Err") << ",\n";
-    if (__type__ == result_ok) 
-      std::cout << "\t.__ok__ = " << __ok__ << "\n";
-    else if (__type__ == result_err) 
-      std::cout << "\t.__err__ = " << __err__ << "\n";
-    std::cout << "}\n";
-  }
 
   bool is_ok() {
     return (__type__ == result_ok);
