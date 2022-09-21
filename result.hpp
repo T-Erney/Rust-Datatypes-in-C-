@@ -14,12 +14,12 @@ struct Result {
     E __err__;
   };
 
-  Result(__result_type__ t, O ok) {
-    __type__ = t;
+  Result(O ok) {
+    __type__ = result_ok;
     __ok__ = ok;
   }
-  Result(__result_type__ t, E err) {
-    __type__ = t;
+  Result(E err) {
+    __type__ = result_err;
     __err__ = err;
   }
   Result(const Result& src) {
@@ -54,11 +54,11 @@ struct Result {
 };
 
 template <class O, class E> Result<O, E> Ok(O data) {
-  return Result<O, E>(result_ok, data);
+  return Result<O, E>(data);
 }
 
 template <class O, class E> Result<O, E> Err(E err) {
-  return Result<O, E>(result_err, err);
+  return Result<O, E>(err);
 }
 
 #endif // RESULT_TYPE
