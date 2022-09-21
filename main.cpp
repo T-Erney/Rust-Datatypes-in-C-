@@ -21,6 +21,9 @@ int main() {
     1, 2, 3, 4, 5, 6, 7, 8, 9
   };
 
+  // if you like to live dangerously...
+  // auto s = sum(arr, 9).ok().unwrap();
+
   int s = 0;
   auto result = sum(arr, 9);
   if (result.is_ok()) {
